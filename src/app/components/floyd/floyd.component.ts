@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 </p>
 
 <pre appAngularPre [highlightColor]="color">
-  {{floydString|paraghraphiPipe:"¶"}}
+  {{floydString|paraghraphiPipe:{from:'\\n\\r',to:'¶ \\n\\r'} }}
 </pre>
 `,
   styleUrls: ['./floyd.component.css'],
