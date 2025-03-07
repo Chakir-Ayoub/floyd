@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
   <button (click)="onClick(rows.value,checkbox.checked)">CLICK</button>
 </p>
 
-<pre>
+<pre appAngularPre [highlightColor]="color">
   {{floydString}}
 </pre>
 `,
@@ -19,8 +19,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FloydComponent implements OnInit {
   public floydString:string='';
-  private static startOfAlphabet=97;
-
+  public color:"yellow"|"red";
   constructor(private triangleService:TriangleService){
 
   }
@@ -30,8 +29,10 @@ export class FloydComponent implements OnInit {
   onClick(rows:any,checked:Boolean){
     if(checked){
       this.floydString = this.triangleService.evenFloydTriangle(rows);
+      this.color='red';
       }else{
       this.floydString = this.triangleService.floydTriangle(rows);
+      this.color='yellow';
       }
   }
 }
