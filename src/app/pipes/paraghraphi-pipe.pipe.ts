@@ -5,8 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ParaghraphiPipePipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: string,paragrapheSymbol:string): string {
+    return value.replace(new RegExp("\n\r",'g'),paragrapheSymbol+"\n\r"
+  );
   }
 
 }
