@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FloydComponent } from './components/floyd/floyd.component';
 import { AngularPreDirective } from './dericetives/angular-pre.directive';
+import { ParaghraphiPipePipe } from './pipes/paraghraphi-pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     FloydComponent,
-    AngularPreDirective
+    AngularPreDirective,
+    ParaghraphiPipePipe
   ],
   imports: [
     BrowserModule,
